@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:padding="20dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Contact Image -->
+        <ImageView
+            android:id="@+id/contactImageView"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_bg"
+            android:padding="20dp"
+            android:src="@android:drawable/ic_menu_camera"
+            android:contentDescription="Contact Image"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Name + Simple Edit Icon -->
+        <!-- Name + Edit Icon -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Edit Icon changed to ImageButton -->
+            <ImageButton
+                android:id="@+id/editButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:contentDescription="Edit Contact"
+                android:src="@android:drawable/ic_menu_edit"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+
+        </LinearLayout>
+
+
+        <!-- Divider -->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="3dp"
+            android:background="#6200EE"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Phone Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/detail_card_bg"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_call"
+                android:tint="#00796B"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:id="@+id/phoneTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textSize="18sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Email Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/detail_card_bg"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_dialog_email"
+                android:tint="#00796B"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:id="@+id/emailTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="18sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Action Buttons: Call, Message, Email -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:weightSum="3">
+
+            <ImageButton
+                android:id="@+id/callButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:backgroundTint="#00796B"
+                android:src="@android:drawable/ic_menu_call"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Call"
+                app:tint="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/messageButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:backgroundTint="#00796B"
+                android:src="@android:drawable/ic_dialog_email"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Message"
+                app:tint="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/emailButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:backgroundTint="#00796B"
+                android:src="@android:drawable/ic_menu_send"
+                android:contentDescription="Email"
+                app:tint="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Button Row (Delete + Back) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp">
+
+            <!-- Delete Contact -->
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delete"
+                android:textAllCaps="false"
+                android:textSize="16dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#D32F2F"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Back -->
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Back"
+                android:textAllCaps="false"
+                android:textSize="16dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#455A64"
+                android:textColor="@android:color/white"
+                android:padding="12dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

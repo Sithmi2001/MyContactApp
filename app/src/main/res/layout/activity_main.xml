@@ -1,0 +1,72 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- AppBar / Search Bar Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#483D8B"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contacts"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            android:paddingStart="16dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- Search bar -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search Contacts"
+            android:iconifiedByDefault="false"
+            android:background="@android:color/white"
+            android:padding="4dp"/>
+    </LinearLayout>
+
+    <!-- RecyclerView for contacts -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="96dp"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp"/>
+
+    <!-- FAB to add contact -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:contentDescription="Add Contact"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="@android:color/white"
+        app:backgroundTint="#483D8B"/>
+
+    <ImageButton
+        android:id="@+id/btnSettings"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/ic_menu_preferences"
+        android:background="@android:color/transparent"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Settings" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
